@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さくら建設工務店 | 大阪・地域密着のリフォーム・新築工事</title>
+<meta name="description" content="大阪府の地域密着工務店。新築・リフォーム・増改築。LINEで気軽に相談、AIが24時間対応。無料見積もり実施中。">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Hiragino Sans","Yu Gothic","游ゴシック",sans-serif;color:#1a1a2e;background:#fff;line-height:1.7}
+:root{
+  --navy:#1B2B4B;--navy-light:#243660;--navy-pale:#EEF2F8;
+  --orange:#E07830;--orange-pale:#FEF0E6;
+  --gold:#C9A84C;--green:#06C755;--green-dark:#05A847;
+  --gray:#F5F5F0;--border:#E0DDD8;--brown:#5A5048;
+}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.section{padding:72px 0}
+.section-title{font-size:clamp(22px,4vw,30px);font-weight:700;text-align:center;margin-bottom:8px;color:var(--navy)}
+.section-title span{color:var(--orange)}
+.section-sub{text-align:center;color:var(--brown);font-size:13px;margin-bottom:44px;letter-spacing:.1em}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:background .2s;font-family:inherit}
+.btn:hover{background:#c86820}
+.btn-line{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-size:15px;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:background .2s;font-family:inherit}
+.btn-line:hover{background:var(--green-dark)}
+.btn-ol{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--navy);color:var(--navy);font-size:15px;font-weight:700;padding:11px 26px;border-radius:6px;text-decoration:none;cursor:pointer;transition:all .2s;font-family:inherit}
+.btn-ol:hover{background:var(--navy);color:#fff}
+.line-icon{width:22px;height:22px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.line-icon::before{content:"";display:block;width:14px;height:14px;background:var(--green);border-radius:3px}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(27,43,75,.97);backdrop-filter:blur(8px)}
+.hi{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 28px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:38px;height:38px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.logo-text{font-size:16px;font-weight:700;color:#fff}
+.logo-text small{display:block;font-size:10px;font-weight:400;color:rgba(255,255,255,.6);letter-spacing:.08em}
+nav{display:flex;align-items:center;gap:24px}
+nav a{font-size:13px;color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s}
+nav a:hover{color:#fff}
+.hline{display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;transition:background .2s}
+.hline:hover{background:var(--green-dark)}
+
+/* HERO */
+#hero{padding-top:64px;min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0f1c35 0%,#1B2B4B 50%,#1e3a6e 100%);opacity:.9}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center;max-width:1080px;margin:0 auto;padding:48px 24px;width:100%}
+.hero-label{display:inline-block;background:rgba(224,120,48,.2);color:var(--orange);font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:20px;border:1px solid rgba(224,120,48,.3);letter-spacing:.05em}
+h1{font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.3;color:#fff;margin-bottom:20px}
+h1 em{color:var(--orange);font-style:normal}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:32px;line-height:1.9}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero-stats{display:flex;gap:28px}
+.stat{border-left:3px solid var(--orange);padding-left:14px}
+.stat-n{font-size:28px;font-weight:800;color:#fff;line-height:1}
+.stat-n small{font-size:14px;font-weight:400;color:rgba(255,255,255,.6)}
+.stat-l{font-size:11px;color:rgba(255,255,255,.5);margin-top:4px}
+
+/* LINE CARD */
+.line-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px;backdrop-filter:blur(4px)}
+.lc-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.lc-sub{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.7}
+.lc-features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.lc-feat{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.8)}
+.lc-icon{width:28px;height:28px;background:rgba(6,199,85,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.lc-qr{background:#fff;border-radius:10px;padding:12px;text-align:center;margin-top:16px}
+.lc-qr-box{width:80px;height:80px;background:var(--border);border-radius:6px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--brown)}
+.lc-qr-text{font-size:11px;color:var(--brown)}
+
+/* FEATURES */
+#features{background:#fff}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fc{background:var(--gray);border-radius:16px;padding:28px 24px;transition:transform .2s}
+.fc:hover{transform:translateY(-4px)}
+.fc-num{font-size:11px;font-weight:700;color:var(--orange);letter-spacing:.1em;margin-bottom:10px}
+.fc-icon{width:56px;height:56px;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px;box-shadow:0 2px 12px rgba(27,43,75,.08)}
+.fc-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.fc-desc{font-size:13px;color:var(--brown);line-height:1.8}
+
+/* SERVICES */
+#services{background:var(--navy-pale)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc{background:#fff;border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.sc:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(27,43,75,.12)}
+.sc-img{height:110px;display:flex;align-items:center;justify-content:center;font-size:40px}
+.sc-body{padding:18px 20px}
+.sc-name{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.sc-desc{font-size:12px;color:var(--brown);margin-bottom:12px;line-height:1.7}
+.sc-price{font-size:13px;font-weight:700;color:var(--orange)}
+
+/* LINE CTA SECTION */
+#line-cta{background:var(--green)}
+.lcta-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:64px 24px;max-width:1080px;margin:0 auto}
+.lcta-copy h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:#fff;margin-bottom:14px}
+.lcta-copy p{font-size:14px;color:rgba(255,255,255,.88);line-height:1.9}
+.lcta-list{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.lcta-item{display:flex;align-items:center;gap:10px;font-size:14px;color:#fff}
+.lcta-check{width:24px;height:24px;background:rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.lcta-card{background:#fff;border-radius:18px;padding:28px}
+.lcta-card-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.lcta-card-sub{font-size:13px;color:var(--brown);margin-bottom:20px;line-height:1.6}
+.lcta-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.lcta-step{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--navy)}
+.lcta-step-num{width:28px;height:28px;background:var(--green);border-radius:50%;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* VOICE */
+#voice{background:#fff}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vc{background:var(--gray);border-radius:14px;padding:22px}
+.vstars{color:#F5A623;font-size:14px;margin-bottom:10px}
+.vtag{display:inline-block;background:var(--navy-pale);color:var(--navy);font-size:11px;padding:2px 8px;border-radius:20px;margin-bottom:10px;font-weight:600}
+.vtext{font-size:13px;line-height:1.8;margin-bottom:14px;color:#1a1a2e}
+.vtext::before{content:"「";color:var(--orange);font-weight:700}
+.vtext::after{content:"」";color:var(--orange);font-weight:700}
+.vperson{display:flex;align-items:center;gap:10px;border-top:1px solid var(--border);padding-top:12px}
+.vavatar{width:34px;height:34px;border-radius:50%;background:var(--navy-pale);display:flex;align-items:center;justify-content:center;font-size:16px}
+.vname{font-size:13px;font-weight:700;color:var(--navy)}
+.vmeta{font-size:11px;color:var(--brown)}
+
+/* ESTIMATE FORM */
+#estimate{background:var(--navy)}
+.est-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:72px 24px;max-width:1080px;margin:0 auto}
+.est-copy h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:#fff;margin-bottom:14px}
+.est-copy p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.9}
+.est-points{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.est-pt{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.85)}
+.est-dot{width:8px;height:8px;background:var(--orange);border-radius:50%;flex-shrink:0}
+.est-form{background:#fff;border-radius:18px;padding:28px}
+.ef-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:20px}
+.fg{margin-bottom:13px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--brown);margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;color:#1a1a2e;background:#fff;font-family:inherit;transition:border-color .2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsub{background:var(--orange);color:#fff;border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:700;width:100%;cursor:pointer;font-family:inherit;margin-top:4px;transition:background .2s}
+.fsub:hover{background:#c86820}
+.fnote{font-size:11px;color:var(--brown);text-align:center;margin-top:8px}
+
+/* STAFF */
+#staff{background:#fff}
+.staff-in{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:center}
+.staff-photo{background:var(--gray);border-radius:18px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-size:72px}
+.staff-label{font-size:11px;color:var(--orange);font-weight:700;letter-spacing:.1em;margin-bottom:6px}
+.staff-name{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.staff-kana{font-size:13px;color:var(--brown);margin-bottom:16px}
+.staff-desc{font-size:14px;color:var(--brown);line-height:1.9;margin-bottom:16px}
+.cy{display:flex;gap:12px;font-size:13px;color:var(--brown);margin-bottom:7px}
+.cy span{font-weight:700;color:var(--navy);min-width:48px}
+
+/* ACCESS */
+#access{background:var(--navy-pale)}
+.ain{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.amap{background:var(--border);border-radius:14px;height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;font-size:14px;color:var(--brown)}
+.iblk{margin-bottom:16px}
+.ilbl{font-size:11px;font-weight:700;color:var(--orange);letter-spacing:.1em;margin-bottom:5px}
+.ival{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:2px}
+.isub{font-size:12px;color:var(--brown)}
+
+/* FOOTER */
+footer{background:#0d1929;color:rgba(255,255,255,.6);padding:48px 0 24px}
+.fin{max-width:1080px;margin:0 auto;padding:0 24px 32px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;border-bottom:1px solid rgba(255,255,255,.08)}
+.flogo{font-size:17px;font-weight:800;color:#fff;margin-bottom:10px}
+.fdesc{font-size:12px;line-height:1.9}
+.fhead{font-size:13px;font-weight:700;color:#fff;margin-bottom:12px}
+.flinks{display:flex;flex-direction:column;gap:8px}
+.flinks a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:var(--orange)}
+.fbot{max-width:1080px;margin:0 auto;padding:16px 24px 0;display:flex;justify-content:space-between;font-size:11px}
+
+/* CHATBOT */
+#chat-bubble{position:fixed;bottom:28px;right:28px;z-index:200}
+.chat-btn{width:60px;height:60px;background:var(--navy);border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(27,43,75,.4);transition:transform .2s}
+.chat-btn:hover{transform:scale(1.05)}
+.chat-badge{position:absolute;top:-4px;right:-4px;background:var(--orange);color:#fff;width:20px;height:20px;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+.chat-window{position:absolute;bottom:72px;right:0;width:320px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;display:none}
+.chat-window.open{display:block}
+.cw-header{background:var(--navy);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.cw-avatar{width:36px;height:36px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.cw-name{color:#fff;font-size:14px;font-weight:700}
+.cw-status{color:rgba(255,255,255,.6);font-size:11px}
+.cw-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,.6);font-size:18px;cursor:pointer;line-height:1}
+.cw-messages{height:240px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#F8F8F5}
+.msg{max-width:85%;padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.6}
+.msg.bot{background:#fff;color:#1a1a2e;border-radius:4px 12px 12px 12px;align-self:flex-start;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.msg.user{background:var(--navy);color:#fff;border-radius:12px 4px 12px 12px;align-self:flex-end}
+.cw-choices{display:flex;flex-direction:column;gap:6px;padding:0 14px 12px}
+.cw-choice{background:var(--navy-pale);color:var(--navy);border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:13px;font-weight:600;cursor:pointer;text-align:left;transition:all .15s;font-family:inherit}
+.cw-choice:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cw-input-row{display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--border)}
+.cw-input{flex:1;padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;font-family:inherit}
+.cw-input:focus{border-color:var(--navy)}
+.cw-send{background:var(--navy);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;font-family:inherit}
+
+/* LINE FLOAT */
+#line-float{position:fixed;bottom:100px;right:28px;z-index:199}
+.lf-btn{display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 16px rgba(6,199,85,.4);transition:background .2s}
+.lf-btn:hover{background:var(--green-dark)}
+.lf-label{font-size:11px;color:rgba(255,255,255,.8);font-weight:400}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr}
+  .line-card{display:none}
+  .feat-grid,.vgrid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .lcta-in,.est-in{grid-template-columns:1fr}
+  .staff-in{grid-template-columns:1fr}
+  .staff-photo{max-width:180px}
+  .ain{grid-template-columns:1fr}
+  .fin{grid-template-columns:1fr}
+  nav{display:none}
+  body{padding-bottom:72px}
+  #line-float{bottom:80px}
+}
+@media(max-width:580px){
+  .svc-grid,.frow{grid-template-columns:1fr}
+  .hero-stats{gap:16px}
+  .chat-window{width:calc(100vw - 40px);right:-8px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hi">
+    <a href="#" class="logo">
+      <div class="logo-icon">🏠</div>
+      <div class="logo-text">さくら建設工務店<small>SAKURA CONSTRUCTION</small></div>
+    </a>
+    <nav>
+      <a href="#features">選ばれる理由</a>
+      <a href="#services">施工メニュー</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#access">アクセス</a>
+      <a href="#line-cta" class="hline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 10.5C20 6.36 16.42 3 12 3S4 6.36 4 10.5c0 3.77 3.04 6.92 7.14 7.4.28.06.66.19.75.43.09.22.06.56.03.78l-.12.72c-.04.22-.17.87.76.47.93-.4 5.01-2.95 6.83-5.05C20.41 13.27 20 11.94 20 10.5z" fill="#fff"/></svg>
+        LINEで無料相談
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-in">
+    <div>
+      <span class="hero-label">🏠 大阪府・地域密着20年の実績</span>
+      <h1>リフォームの悩み、<br><em>LINEで今すぐ</em><br>相談できます。</h1>
+      <p class="hero-desc">新築・リフォーム・増改築まで一括対応。<br>AIが24時間お問い合わせに対応するから<br>深夜の相談もすぐに返答します。</p>
+      <div class="hero-btns">
+        <a href="#line-cta" class="btn-line">
+          <span class="line-icon"></span>LINEで無料相談（24h）
+        </a>
+        <a href="#estimate" class="btn">見積もり依頼（無料）</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-n">850<small>件+</small></div><div class="stat-l">累計施工実績</div></div>
+        <div class="stat"><div class="stat-n">4.9<small>/5</small></div><div class="stat-l">Google口コミ評価</div></div>
+        <div class="stat"><div class="stat-n">20<small>年</small></div><div class="stat-l">地域密着の実績</div></div>
+      </div>
+    </div>
+    <div class="line-card">
+      <div class="lc-title">LINEで気軽に相談できます</div>
+      <div class="lc-sub">AIが24時間対応。<br>メッセージを送るだけで見積もりの流れをご案内します。</div>
+      <div class="lc-features">
+        <div class="lc-feat"><div class="lc-icon">⚡</div>深夜・休日もすぐ返答</div>
+        <div class="lc-feat"><div class="lc-icon">📸</div>写真を送れば概算見積もりも可能</div>
+        <div class="lc-feat"><div class="lc-icon">🔒</div>しつこい営業は一切しません</div>
+      </div>
+      <a href="#line-cta" class="btn-line" style="width:100%;justify-content:center;font-size:14px">
+        <span class="line-icon"></span>友だち追加して相談する
+      </a>
+      <div class="lc-qr">
+        <div class="lc-qr-box">QRコード</div>
+        <div class="lc-qr-text">スマホでスキャンして追加</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section">
+  <div class="container">
+    <p class="section-sub">WHY CHOOSE US</p>
+    <h2 class="section-title">さくら建設が<span>選ばれる</span>3つの理由</h2>
+    <div class="feat-grid">
+      <div class="fc">
+        <div class="fc-num">REASON 01</div>
+        <div class="fc-icon">💬</div>
+        <div class="fc-title">AIが24時間即座に対応</div>
+        <div class="fc-desc">LINEにメッセージを送れば、AIが即座に内容をヒアリング。担当者が不在の深夜・休日でも機会を逃しません。翌朝には担当者から詳細をご連絡します。</div>
+      </div>
+      <div class="fc">
+        <div class="fc-num">REASON 02</div>
+        <div class="fc-icon">🏆</div>
+        <div class="fc-title">施工実績850件・地域密着20年</div>
+        <div class="fc-desc">大阪府内の新築・リフォームを850件以上手がけてきました。地域の気候・建築事情に精通したベテラン職人が丁寧に施工します。</div>
+      </div>
+      <div class="fc">
+        <div class="fc-num">REASON 03</div>
+        <div class="fc-icon">💰</div>
+        <div class="fc-title">見積もり無料・明朗会計</div>
+        <div class="fc-desc">見積もりは完全無料。追加費用が発生する場合は必ず事前にご説明します。「思ったより高かった」というトラブルをゼロにするため、詳細な内訳書を毎回作成します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <p class="section-sub">SERVICE MENU</p>
+    <h2 class="section-title">施工<span>メニュー</span></h2>
+    <div class="svc-grid">
+      <div class="sc"><div class="sc-img" style="background:#FEF0E6">🏡</div><div class="sc-body"><div class="sc-name">新築工事</div><div class="sc-desc">土地探しから設計・施工まで一貫対応。お客様の理想の家を丁寧に形にします。</div><div class="sc-price">要お見積もり（無料）</div></div></div>
+      <div class="sc"><div class="sc-img" style="background:#EEF2F8">🔨</div><div class="sc-body"><div class="sc-name">リフォーム全般</div><div class="sc-desc">キッチン・浴室・トイレ・内装など。小規模から大規模まで対応します。</div><div class="sc-price">10万円〜</div></div></div>
+      <div class="sc"><div class="sc-img" style="background:#E6F7EC">🚿</div><div class="sc-body"><div class="sc-name">水回りリフォーム</div><div class="sc-desc">浴室・洗面台・キッチン・トイレの交換・リフォームに特化した専門チーム。</div><div class="sc-price">30万円〜</div></div></div>
+      <div class="sc"><div class="sc-img" style="background:#FFF8E6">🪟</div><div class="sc-body"><div class="sc-name">外壁・屋根工事</div><div class="sc-desc">外壁塗装・屋根葺き替え・雨漏り修理。補助金申請のサポートも行います。</div><div class="sc-price">50万円〜</div></div></div>
+      <div class="sc"><div class="sc-img" style="background:#F0E6FB">🏗️</div><div class="sc-body"><div class="sc-name">増改築・間取り変更</div><div class="sc-desc">家族構成の変化に合わせた間取り変更・部屋の増設・バリアフリー改修。</div><div class="sc-price">80万円〜</div></div></div>
+      <div class="sc"><div class="sc-img" style="background:#FEF0E6">♿</div><div class="sc-body"><div class="sc-name">バリアフリー工事</div><div class="sc-desc">手すり設置・段差解消・スロープ設置。介護保険適用リフォームの申請代行も。</div><div class="sc-price">介護保険適用あり</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LINE CTA -->
+<section id="line-cta">
+  <div class="lcta-in">
+    <div class="lcta-copy">
+      <h2>LINEで相談すると<br>こんなに便利</h2>
+      <p>電話が苦手な方、まだ検討段階の方も大歓迎。写真を送るだけで概算費用をお伝えすることも可能です。</p>
+      <div class="lcta-list">
+        <div class="lcta-item"><div class="lcta-check">✓</div>24時間AIが即座に返答</div>
+        <div class="lcta-item"><div class="lcta-check">✓</div>写真を送れば概算見積もりも可能</div>
+        <div class="lcta-item"><div class="lcta-check">✓</div>しつこい営業・電話は一切なし</div>
+        <div class="lcta-item"><div class="lcta-check">✓</div>相談だけでもOK・費用ゼロ</div>
+      </div>
+    </div>
+    <div class="lcta-card">
+      <div class="lcta-card-title">LINEで相談する流れ</div>
+      <div class="lcta-card-sub">友だち追加後、AIアシスタントが内容を確認してご案内します</div>
+      <div class="lcta-steps">
+        <div class="lcta-step"><div class="lcta-step-num">1</div>LINEで友だち追加</div>
+        <div class="lcta-step"><div class="lcta-step-num">2</div>AIが内容をヒアリング（24h自動）</div>
+        <div class="lcta-step"><div class="lcta-step-num">3</div>担当者から詳細をご連絡（翌営業日）</div>
+        <div class="lcta-step"><div class="lcta-step-num">4</div>無料現地調査・お見積もり</div>
+      </div>
+      <a href="#" class="btn-line" style="width:100%;justify-content:center" onclick="alert('デモサイトです。実装時にLINE友達追加リンクが設定されます。')">
+        <span class="line-icon"></span>今すぐ友だち追加（無料）
+      </a>
+      <p style="font-size:11px;color:var(--brown);text-align:center;margin-top:10px">個人情報は施工目的のみに使用します</p>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section id="voice" class="section">
+  <div class="container">
+    <p class="section-sub">CUSTOMER VOICE</p>
+    <h2 class="section-title">お客様の<span>声</span></h2>
+    <div class="vgrid">
+      <div class="vc">
+        <div class="vstars">★★★★★</div>
+        <div class="vtag">キッチンリフォーム</div>
+        <div class="vtext">LINEで相談したら深夜なのにすぐ返信が来てびっくり。AIだったんですね。翌朝には担当の方から連絡があって、とてもスムーズでした。仕上がりも大満足です。</div>
+        <div class="vperson"><div class="vavatar">👩</div><div><div class="vname">田中 恵子さん（52歳）</div><div class="vmeta">大阪市北区 ／ キッチン全面リフォーム</div></div></div>
+      </div>
+      <div class="vc">
+        <div class="vstars">★★★★★</div>
+        <div class="vtag">外壁塗装</div>
+        <div class="vtext">他社と比較しましたがさくら建設さんが一番丁寧に説明してくれました。見積書の内訳が細かくて安心できました。補助金申請の手続きも全部やってもらえて助かりました。</div>
+        <div class="vperson"><div class="vavatar">👨</div><div><div class="vname">山口 雄一さん（61歳）</div><div class="vmeta">吹田市 ／ 外壁塗装・屋根補修</div></div></div>
+      </div>
+      <div class="vc">
+        <div class="vstars">★★★★★</div>
+        <div class="vtag">バリアフリー改修</div>
+        <div class="vtext">母の介護のため急ぎでバリアフリー工事をお願いしました。介護保険の申請も代行してもらえて、自己負担をかなり抑えられました。スピードと対応の良さに感謝しています。</div>
+        <div class="vperson"><div class="vavatar">👩</div><div><div class="vname">木村 美代子さん（47歳）</div><div class="vmeta">豊中市 ／ バリアフリー改修工事</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section id="estimate">
+  <div class="est-in">
+    <div class="est-copy">
+      <h2>無料見積もりを<br>今すぐ依頼できます</h2>
+      <p>フォームに入力するだけで、担当者から2営業日以内にご連絡します。現地調査・見積もりはすべて無料です。</p>
+      <div class="est-points">
+        <div class="est-pt"><div class="est-dot"></div>現地調査・見積もり完全無料</div>
+        <div class="est-pt"><div class="est-dot"></div>2営業日以内に担当者からご連絡</div>
+        <div class="est-pt"><div class="est-dot"></div>見積もりだけでもOK・断りやすい</div>
+        <div class="est-pt"><div class="est-dot"></div>補助金・助成金の活用もご提案</div>
+      </div>
+    </div>
+    <div class="est-form">
+      <div class="ef-title">🏠 無料見積もり依頼</div>
+      <div class="frow">
+        <div class="fg"><label>お名前 <span style="color:var(--orange)">*</span></label><input type="text" placeholder="山田 太郎"></div>
+        <div class="fg"><label>電話番号 <span style="color:var(--orange)">*</span></label><input type="tel" placeholder="090-0000-0000"></div>
+      </div>
+      <div class="fg"><label>メールアドレス</label><input type="email" placeholder="example@email.com"></div>
+      <div class="frow">
+        <div class="fg"><label>お住まいのエリア</label><input type="text" placeholder="大阪市北区"></div>
+        <div class="fg"><label>ご希望の工事種類</label>
+          <select><option>リフォーム全般</option><option>新築工事</option><option>水回りリフォーム</option><option>外壁・屋根工事</option><option>増改築・間取り変更</option><option>バリアフリー工事</option><option>その他</option></select>
+        </div>
+      </div>
+      <div class="fg"><label>ご要望・お悩み（任意）</label><textarea rows="3" placeholder="例：キッチンを新しくしたい、予算は100万円程度…" style="resize:none"></textarea></div>
+      <button class="fsub" onclick="alert('デモサイトです。実装時にフォーム送信が有効になります。')">見積もりを依頼する（無料）</button>
+      <div class="fnote">個人情報は施工目的のみに使用します。第三者への提供はありません。</div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section id="staff" class="section">
+  <div class="container">
+    <p class="section-sub">COMPANY PROFILE</p>
+    <h2 class="section-title">代表<span>紹介</span></h2>
+    <div class="staff-in">
+      <div class="staff-photo">👨‍🔧</div>
+      <div>
+        <div class="staff-label">REPRESENTATIVE</div>
+        <div class="staff-name">佐藤 建一</div>
+        <div class="staff-kana">Kenichi Sato ／ 代表取締役</div>
+        <div class="staff-desc">「家は人生最大の買い物。だからこそ誠実に向き合いたい。」創業以来20年、大阪府内で850件以上の施工を手がけてきました。LINEやAIを活用して、お客様が気軽に相談できる環境づくりにも力を入れています。</div>
+        <div class="cy"><span>2004年</span>建設業許可取得・さくら建設工務店 創業</div>
+        <div class="cy"><span>2010年</span>施工実績300件突破</div>
+        <div class="cy"><span>2018年</span>大阪府優良建設業者表彰受賞</div>
+        <div class="cy"><span>2024年</span>LINE・AI相談システム導入</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access" class="section">
+  <div class="container">
+    <p class="section-sub">ACCESS & CONTACT</p>
+    <h2 class="section-title">所在地・<span>お問い合わせ</span></h2>
+    <div class="ain">
+      <div class="amap">
+        <div style="font-size:36px">📍</div>
+        <div style="font-weight:700;color:var(--navy);font-size:15px">さくら建設工務店</div>
+        <div>大阪府大阪市北区梅田2-2-2</div>
+        <div style="font-size:11px;color:var(--brown);margin-top:4px">（実装時にGoogle Map埋め込み）</div>
+      </div>
+      <div>
+        <div class="iblk"><div class="ilbl">所在地</div><div class="ival">大阪府大阪市北区梅田2-2-2 さくらビル3F</div><div class="isub">📍 JR大阪駅 徒歩7分　🚗 近隣にコインパーキングあり</div></div>
+        <div class="iblk"><div class="ilbl">営業時間</div><div class="ival">平日 9:00〜18:00 ／ 土曜 9:00〜17:00</div><div class="isub">日・祝は休業（LINEは24時間受付中）</div></div>
+        <div class="iblk"><div class="ilbl">電話番号</div><div class="ival">06-XXXX-XXXX</div><div class="isub">営業時間内にお電話ください</div></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+          <a href="#line-cta" class="btn-line" style="font-size:14px">LINEで相談（24h）</a>
+          <a href="#estimate" class="btn" style="font-size:14px">見積もり依頼（無料）</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fin">
+    <div><div class="flogo">🏠 さくら建設工務店</div><div class="fdesc">大阪府の地域密着工務店。<br>新築・リフォーム・増改築まで<br>20年の実績でサポートします。</div></div>
+    <div><div class="fhead">メニュー</div><div class="flinks"><a href="#features">選ばれる理由</a><a href="#services">施工メニュー</a><a href="#voice">お客様の声</a><a href="#staff">代表紹介</a><a href="#access">アクセス</a><a href="#estimate">無料見積もり</a></div></div>
+    <div><div class="fhead">お問い合わせ</div><div class="fdesc">📍 大阪府大阪市北区梅田2-2-2<br>📞 06-XXXX-XXXX<br>🕐 平日 9:00〜18:00<br>　　土曜 9:00〜17:00<br>💬 LINE：24時間受付中</div></div>
+  </div>
+  <div class="fbot"><span>© 2024 さくら建設工務店 All Rights Reserved.</span><span style="color:rgba(255,255,255,.3)">プライバシーポリシー</span></div>
+</footer>
+
+<!-- LINE FLOAT BUTTON -->
+<div id="line-float">
+  <a href="#line-cta" class="lf-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 10.5C20 6.36 16.42 3 12 3S4 6.36 4 10.5c0 3.77 3.04 6.92 7.14 7.4.28.06.66.19.75.43.09.22.06.56.03.78l-.12.72c-.04.22-.17.87.76.47.93-.4 5.01-2.95 6.83-5.05C20.41 13.27 20 11.94 20 10.5z" fill="white"/></svg>
+    <div><div style="font-size:13px;font-weight:700">LINE相談</div><div class="lf-label">24時間対応</div></div>
+  </a>
+</div>
+
+<!-- AI CHATBOT -->
+<div id="chat-bubble">
+  <div class="chat-window" id="chatWindow">
+    <div class="cw-header">
+      <div class="cw-avatar">🤖</div>
+      <div><div class="cw-name">AIアシスタント</div><div class="cw-status">オンライン・即返答</div></div>
+      <button class="cw-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="cw-messages" id="chatMessages">
+      <div class="msg bot">こんにちは！さくら建設工務店のAIアシスタントです。リフォーム・新築に関するご相談をお気軽にどうぞ。</div>
+    </div>
+    <div class="cw-choices" id="chatChoices">
+      <button class="cw-choice" onclick="selectChoice('リフォームについて相談したい')">🔨 リフォームについて相談したい</button>
+      <button class="cw-choice" onclick="selectChoice('費用・見積もりを知りたい')">💰 費用・見積もりを知りたい</button>
+      <button class="cw-choice" onclick="selectChoice('新築を検討している')">🏡 新築を検討している</button>
+    </div>
+    <div class="cw-input-row">
+      <input class="cw-input" id="chatInput" placeholder="メッセージを入力..." onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="cw-send" onclick="sendMsg()">送信</button>
+    </div>
+  </div>
+  <button class="chat-btn" onclick="toggleChat()" aria-label="チャットを開く">
+    💬
+    <div class="chat-badge" id="chatBadge">1</div>
+  </button>
+</div>
+
+<script>
+function toggleChat(){
+  const w=document.getElementById('chatWindow');
+  const b=document.getElementById('chatBadge');
+  w.classList.toggle('open');
+  if(w.classList.contains('open'))b.style.display='none';
+}
+
+const replies={
+  'リフォームについて相談したい':'どのような箇所のリフォームをお考えですか？キッチン・浴室・外壁など、お気軽にお聞かせください。写真があればLINEで送っていただくと概算費用もお伝えできます。',
+  '費用・見積もりを知りたい':'見積もりは完全無料です！工事内容・規模によって費用は大きく変わりますので、まずはご要望をお聞かせください。LINEから写真を送っていただければ目安の金額をお伝えできます。',
+  '新築を検討している':'新築のご検討ありがとうございます！土地の有無・ご予算・ご希望の間取りなど、どんな段階でもお気軽にご相談ください。無料相談会も随時開催しています。',
+};
+
+function selectChoice(text){
+  addMsg(text,'user');
+  document.getElementById('chatChoices').innerHTML='';
+  setTimeout(()=>{
+    const r=replies[text]||'ありがとうございます。担当者より詳しいご案内をさせていただきます。LINEからもご相談いただけます。';
+    addMsg(r,'bot');
+    setTimeout(()=>{
+      document.getElementById('chatChoices').innerHTML='<button class="cw-choice" onclick="window.location.href=\'#line-cta\'">💬 LINEで続けて相談する ↗</button><button class="cw-choice" onclick="window.location.href=\'#estimate\'">📋 見積もり依頼フォームへ ↗</button>';
+    },500);
+  },600);
+}
+
+function addMsg(text,type){
+  const m=document.getElementById('chatMessages');
+  const d=document.createElement('div');
+  d.className='msg '+type;d.textContent=text;m.appendChild(d);
+  m.scrollTop=m.scrollHeight;
+}
+
+function sendMsg(){
+  const inp=document.getElementById('chatInput');
+  const t=inp.value.trim();if(!t)return;
+  addMsg(t,'user');inp.value='';
+  document.getElementById('chatChoices').innerHTML='';
+  setTimeout(()=>{
+    addMsg('ご連絡ありがとうございます。内容を確認して担当者よりご連絡いたします。お急ぎの場合はLINEからもご相談いただけます。','bot');
+    setTimeout(()=>{
+      document.getElementById('chatChoices').innerHTML='<button class="cw-choice" onclick="window.location.href=\'#line-cta\'">💬 LINEで続けて相談する ↗</button>';
+    },400);
+  },700);
+}
+
+// Scroll nav highlight
+const secs=document.querySelectorAll('section[id]');
+const nas=document.querySelectorAll('nav a[href^="#"]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-80)cur=s.id;});
+  nas.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'#fff':'';});
+},{passive:true});
+
+// Chat badge pulse
+setTimeout(()=>{
+  const b=document.getElementById('chatBadge');
+  if(b)b.style.animation='pulse 1.5s ease-in-out 3';
+},3000);
+</script>
+</body>
+</html>
